@@ -1,0 +1,1432 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl"
+     versionIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology-v2.1.owl">
+    <Prefix name="" IRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="dul" IRI="http://www.loa-cnr.it/ontologies/DUL.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="qudt" IRI="http://qudt.org/1.1/schema/qudt#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="align" IRI="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#"/>
+    <Prefix name="sweet" IRI="http://sweet.jpl.nasa.gov/2.2/sweetAll.owl#"/>
+    <Prefix name="ace_lexicon" IRI="http://attempto.ifi.uzh.ch/ace_lexicon#"/>
+    <Import>http://purl.oclc.org/NET/ssnx/ssn</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Kotis K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The aim of the ontology is to provide a clear understanding of the new research domain of IoT in respect to the need for ‘true’ (i.e. semantic) interoperability of smart entities and other kind of entities (control, physical) that may be plugged in it anytime, by anyone and from anyplace.  The objective is not to focus in sensor and observation data descriptions as in SSN ontology, but instead to emphasize the notion of interconnected, clustered andaligned smart entities towards supporting their semantic registration, coordination and retrieval in a Web of Things.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/IoT/iot#versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IoT-ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Internet of Things (IoT) reference ontology for data integration and semantic coordination of smart entities.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Katasonov A.</Literal>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Application"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlignmentCell"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:isAgentIncludedIn"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IdentityDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:isAbout"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:DesignedArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricHomeAppliance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#serviceProvidedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attachedTo"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actuator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:conceptualizes"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectronicDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:expresses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUCODE"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#providesService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVendor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:includesAgent"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#rdf;PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#alignmentProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricMechanicDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformMessage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:isObjectIncludedIn"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmbeddedDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:featureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:hasInput"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="align:measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ControlEntity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTarget"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAccessAddress"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegisterPlate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BarCode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#topObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommunicationMessage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IdentityCommunication"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RFID_tag"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ontology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActuationService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Message"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:InformationRealization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#modifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#resourceUsedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:defines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIPv6"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalComputer"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObservationService"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Object"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAlignmentCell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IoT_Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComputingDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Server"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="align:relation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:PhysicalAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActuatingDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OntologyAlignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MemorySpace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommandMessage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProcessingPower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#File"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QueryMessage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommunicationBandwidth"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasURI"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="align:Cell"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:isRealizedBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="align:entity2"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/IoT/iot#versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:isConceptualizedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Organization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dul:includesObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGlobalIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aligns"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesResource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTemplate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RequestMessage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartPhone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="align:entity1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Database"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="align:Cell"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="align:relation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="align:Cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="align:entity1"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="align:Cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="align:entity2"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="align:Cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="align:measure"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActuatingDevice"/>
+        <Class IRI="#Actuator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActuatingDevice"/>
+        <Class IRI="#ElectronicDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActuationService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuator"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuator"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#modifies"/>
+            <Class abbreviatedIRI="ssn:Property"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlignmentCell"/>
+        <Class abbreviatedIRI="align:Cell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlignmentCell"/>
+        <Class abbreviatedIRI="dul:Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <Class IRI="#SoftwareAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BarCode"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommandMessage"/>
+        <Class IRI="#RequestMessage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommunicationBandwidth"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommunicationMessage"/>
+        <Class IRI="#DataObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommunicationMessage"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTemplate"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComputingDevice"/>
+        <Class IRI="#ElectronicDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ControlEntity"/>
+        <Class IRI="#IoT_Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataObject"/>
+        <Class abbreviatedIRI="dul:DesignedArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataObject"/>
+        <Class abbreviatedIRI="dul:InformationRealization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Database"/>
+        <Class IRI="#DataObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricHomeAppliance"/>
+        <Class IRI="#ElectricMechanicDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricMechanicDevice"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectronicDevice"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmbeddedDevice"/>
+        <Class IRI="#ElectronicDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmbeddedDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+            <Class IRI="#ActuatingDevice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmbeddedDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+            <Class IRI="#Processor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmbeddedDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:hasComponent"/>
+            <Class abbreviatedIRI="ssn:SensingDevice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#File"/>
+        <Class IRI="#DataObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identifier"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdentityCommunication"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdentityDevice"/>
+        <Class IRI="#ElectronicDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdentityDevice"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdentityDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#attachedTo"/>
+            <Class abbreviatedIRI="dul:PhysicalObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformMessage"/>
+        <Class IRI="#Message"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IoT_Entity"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IoT_Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:featureOfInterest"/>
+            <Class abbreviatedIRI="dul:PhysicalObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IoT_Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:isConceptualizedBy"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#SoftwareAgent"/>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#providesService"/>
+                        <Class IRI="#Service"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="dul:conceptualizes"/>
+                        <Class IRI="#Ontology"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MemorySpace"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Message"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Message"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:isRealizedBy"/>
+            <Class IRI="#CommunicationMessage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObservationService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObservationService"/>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology"/>
+        <Class abbreviatedIRI="dul:Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:defines"/>
+            <Class abbreviatedIRI="dul:Concept"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyAlignment"/>
+        <Class abbreviatedIRI="dul:Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyAlignment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasAlignmentCell"/>
+            <Class IRI="#AlignmentCell"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyAlignment"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasAlignmentCell"/>
+            <Class IRI="#AlignmentCell"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyAlignment"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#aligns"/>
+            <Class IRI="#Ontology"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalComputer"/>
+        <Class IRI="#ComputingDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcessingPower"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processor"/>
+        <Class IRI="#ComputingDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QueryMessage"/>
+        <Class IRI="#RequestMessage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RFID_tag"/>
+        <Class IRI="#IdentityDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisterPlate"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RequestMessage"/>
+        <Class IRI="#Message"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RequestMessage"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTarget"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resource"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Server"/>
+        <Class IRI="#ComputingDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasInput"/>
+            <ObjectUnionOf>
+                <Class IRI="#InformMessage"/>
+                <Class IRI="#RequestMessage"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasOutput"/>
+            <ObjectUnionOf>
+                <Class IRI="#InformMessage"/>
+                <Class IRI="#RequestMessage"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAccessAddress"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartEntity"/>
+        <Class IRI="#IoT_Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartEntity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dul:includesObject"/>
+            <ObjectUnionOf>
+                <Class IRI="#Actuator"/>
+                <Class IRI="#EmbeddedDevice"/>
+                <Class IRI="#Identifier"/>
+                <Class abbreviatedIRI="ssn:Sensor"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartEntity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="ssn:featureOfInterest"/>
+            <Class abbreviatedIRI="dul:PhysicalObject"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartPhone"/>
+        <Class IRI="#EmbeddedDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software"/>
+        <Class abbreviatedIRI="dul:DesignedArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareAgent"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareAgent"/>
+        <Class abbreviatedIRI="dul:PhysicalAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareAgent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#providesService"/>
+            <Class IRI="#Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#attachedTo"/>
+        <ObjectProperty abbreviatedIRI="dul:hasLocation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGlobalIdentifier"/>
+        <ObjectProperty IRI="#topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasIPv6"/>
+        <ObjectProperty IRI="#hasGlobalIdentifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUCODE"/>
+        <ObjectProperty IRI="#hasGlobalIdentifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasURI"/>
+        <ObjectProperty IRI="#hasGlobalIdentifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#providesService"/>
+        <ObjectProperty abbreviatedIRI="dul:isAgentIncludedIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#resourceUsedIn"/>
+        <ObjectProperty abbreviatedIRI="dul:isObjectIncludedIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#serviceProvidedBy"/>
+        <ObjectProperty abbreviatedIRI="dul:includesAgent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#usesResource"/>
+        <ObjectProperty abbreviatedIRI="dul:includesObject"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#providesService"/>
+        <ObjectProperty IRI="#serviceProvidedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#resourceUsedIn"/>
+        <ObjectProperty IRI="#usesResource"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aligns"/>
+        <Class IRI="#OntologyAlignment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#attachedTo"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class abbreviatedIRI="dul:Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVendor"/>
+        <Class abbreviatedIRI="dul:DesignedArtifact"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#providesService"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resourceUsedIn"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#serviceProvidedBy"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usesResource"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aligns"/>
+        <Class IRI="#Ontology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#attachedTo"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVendor"/>
+        <Class abbreviatedIRI="dul:Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#providesService"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resourceUsedIn"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#serviceProvidedBy"/>
+        <Class abbreviatedIRI="dul:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usesResource"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="align:entity1"/>
+        <DataProperty IRI="#alignmentProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="align:entity2"/>
+        <DataProperty IRI="#alignmentProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="align:measure"/>
+        <DataProperty IRI="#alignmentProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="align:relation"/>
+        <DataProperty IRI="#alignmentProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#alignmentProperty"/>
+        <Class abbreviatedIRI="align:Cell"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAccessAddress"/>
+        <Class IRI="#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTemplate"/>
+        <Class IRI="#DataObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="align:entity1"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="align:entity2"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="align:measure"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="align:relation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAccessAddress"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTarget"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTemplate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>align:Cell</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">The result is expressed in the Alignment format. This format, in RDF/XML, is made of a header containing &quot;metadata&quot; about the alignment and of a set of alignment cells (correspondences). Each correspondence is made of two references to the aligned entities, the relation holding between the entities (=) and a confidence measure (1.0) in this correspondence. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>align:Cell</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Alignment cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>align:Cell</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Alignment correspondence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>align:measure</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">hasMeasureValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>align:relation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">hasRelationValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ActuatingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Actuating_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ActuatingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Actuating_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActuatingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">An electronic device that is responsible for acting in order to execute a task, after the related reception of commands.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActuatingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Actuating device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Application</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Applications</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Application</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#CommunicationBandwidth</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Communication_bandwidths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#CommunicationBandwidth</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Communication_bandwidth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ComputingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Computing_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ComputingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Computing_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ComputingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">An electronic device that performs any kind of compuation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ComputingDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Computing device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ControlEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Control_Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ControlEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Control_Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ControlEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">A control entity is an entity with some control behavior/application logic. These entities include a piece of software (application) . A control entity uses one or more smart entities in order to achieve a specific goal e.g. to monitor and adjust temperature in a room based on sensed data. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ElectricHomeAppliance</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electric_home_applianceses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ElectricHomeAppliance</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electric_home_appliances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ElectricHomeAppliance</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Home appliances are electrical/mechanical machines which accomplish some household functions, such as cooking or cleaning. Home appliances can be classified into: Major appliances, or White goods, Small appliances, or Brown goods.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElectricHomeAppliance</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Home Appliances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ElectricMechanicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electric_and_mechanic_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ElectricMechanicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electric_and_mechanic_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ElectricMechanicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electrical or mechanical machines which accomplish some functions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElectricMechanicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electrical and Mechanical Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ElectronicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electronic_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ElectronicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electronic_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>#ElectronicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">http://www.vtt.fi/ontologies/IoT.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ElectronicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Any device that has some electronics integrated in it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElectronicDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Electronic Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#EmbeddedDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Embedded_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#EmbeddedDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Embedded_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EmbeddedDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">An electronic device that embeds other devices such as sensors, actuators and processors.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EmbeddedDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Embeded device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#IdentityDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Attached_Devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#IdentityDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Attached_Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IdentityDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">An electronic device that is capable of be attached on other devices e.g. RFID tag.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IdentityDevice</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Attached device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#IoT_Entity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#IoT_Entity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IoT_Entity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">An Internet of Things entity that  has a distinct, separate existence, situation or view and is consistent with (&apos;satisfying&apos;) a description on a set of entities. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IoT_Entity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#MemorySpace</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Memories</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#MemorySpace</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#OntologyAlignment</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Ontology_alignments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#OntologyAlignment</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Ontology_alignment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#PersonalComputer</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Personal_computers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#PersonalComputer</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Personal_computer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#ProcessingPower</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Processing_times</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#ProcessingPower</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Processing_time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Processor</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Processors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Processor</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Processor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#RFID_tag</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">RFID_tags</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#RFID_tag</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">RFID_tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Resource</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Resources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Resource</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Resource</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Devices contain two types of resources i.e. data and software resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Resource</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Server</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Servers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Server</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Server</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Services</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">The access to  devices (resources) from the &apos;outside&apos; world is performed via services.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#SmartEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Smart_Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#SmartEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Smart_Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SmartEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">A smart entity is an IoT entity that represents the abstract/virtualization of the association between physical entities and other entities that are used to sense or act on them i.e. sensors, actuators, embedded devices. In some cases a smart entity may include an identifier object to associate with a physical object, e.g. an RFID tag.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#SmartEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Smart Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#SmartEntity</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Virtual Object (an iCore/Alcatel‐Lucent concept)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#SmartPhone</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Smart_Phones</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#SmartPhone</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Smart_Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#Software</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Softwares</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#Software</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Software</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Control and Smart entities integrate software (application or software agents) for enabling them to communicate between each other e.g. for smart-housing applications developed by some vendor (application software) or for communicating the entity’s domain knowledge as well as its abilities, goals, current and intended actions (software agent). </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <IRI>#SoftwareAgent</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Software_agents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <IRI>#SoftwareAgent</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Software_agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SoftwareAgent</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">A piece of software that acts for a user or other program in a relationship of agency. The main points that distinguish agents from arbitrary programs are: reaction to the environment, autonomy, goal-orientation and persistence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#alignmentProperty</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">hasAlignmentCellValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <IRI>#aligns</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">aligns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <IRI>#aligns</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">alignses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <IRI>#aligns</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">alignsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attachedTo</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">attached to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAlignmentCell</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">has alignment cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGlobalIdentifier</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">has part UCODE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOwner</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">has owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVendor</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">has Vendor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#resourceUsedIn</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">accessed by service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#usesResource</IRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">access resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>ssn:SensingDevice</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Sensing_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>ssn:SensingDevice</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Sensing_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
+        <Literal datatypeIRI="http://kotis.epizy.com/Ontologies/IoT/IoT-ontology.owl#rdf;PlainLiteral">Sensor</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
