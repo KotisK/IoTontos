@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl"
+     versionIRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto-v06.owl">
+    <Prefix name="" IRI="http://i-lab.aegean.gr/kotis/Ontologies/IoT/IoT-trust-onto.owl"/>
+    <Prefix name="iot" IRI="http://purl.org/IoT/iot#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="iot-trust" IRI="http://purl.org/IoT/iot-trust#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="iot-trust:fuzzyLabel"/>
+        <Literal>&lt;fuzzyOwl2 fuzzyType=&quot;ontology&quot;&gt;
+&lt;FuzzyLogic logic=&quot;zadeh&quot; /&gt;
+&lt;/fuzzyOwl2&gt;</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal>Kotis K.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal>IoT trust ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>George A. Vouros</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The aim of the ontology is to represent trustworthy IoT entities using fuzzy OWL semantics. It is based on the IoT-ontology created by Kotis and Katasonov, 2012.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">IoT Trust Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>versions 0.6
+
+This version changes ontology URI, from &quot;purl&quot;-related to &quot;i-lab&quot;-related.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrustAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrustworthinessObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_behavior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_context"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trustee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trustor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trust_algorithm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTrustValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TO_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TO_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TO_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#trust"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/CONON#port"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/CONON#room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-app#smartRoomApp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provA#myMotionDetectionSensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provA#mySmartLamp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provB#herMotionDetectionSensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provB#herSmartLamp"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/IoT/IoT-trustOnto.owl#fuzzyLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="iot-trust:fuzzyLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#trustModifier"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://purl.org/IoT/IoT-trustOnto.owl#trustModifier"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#TrustworthinessObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_behavior"/>
+            <Class IRI="#Behavior"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrustworthinessObject"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#has_context"/>
+            <Class IRI="http://purl.org/CONON#Context-Entity"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrustworthinessObject"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#has_trustee"/>
+            <Class abbreviatedIRI="iot:IoT-Entity"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrustworthinessObject"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#has_trustor"/>
+            <Class abbreviatedIRI="iot:IoT-Entity"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrustworthinessObject"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#trust_algorithm"/>
+            <Class IRI="#TrustAlgorithm"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Behavior"/>
+        <Class IRI="#TrustAlgorithm"/>
+        <Class IRI="#TrustworthinessObject"/>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#TrustworthinessObject"/>
+        <NamedIndividual IRI="#TO_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrustworthinessObject"/>
+        <NamedIndividual IRI="#TO_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrustworthinessObject"/>
+        <NamedIndividual IRI="#TO_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Behavior"/>
+        <NamedIndividual IRI="#trust"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal xml:lang="en">port</Literal>
+        </Annotation>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+        <NamedIndividual IRI="http://purl.org/CONON#port"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal xml:lang="en">room</Literal>
+        </Annotation>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+        <NamedIndividual IRI="http://purl.org/CONON#room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-app#smartRoomApp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provA#myMotionDetectionSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provA#mySmartLamp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provB#herMotionDetectionSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provB#herSmartLamp"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="#fuzzyLabel"/>
+            <Literal>&lt;fuzzyOwl2 fuzzyType=&quot;axiom&quot;&gt;
+&lt;Degree value=&quot;0.5&quot; /&gt;
+&lt;/fuzzyOwl2&gt;</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#has_behavior"/>
+        <NamedIndividual IRI="#TO_1"/>
+        <NamedIndividual IRI="#trust"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_context"/>
+        <NamedIndividual IRI="#TO_1"/>
+        <NamedIndividual IRI="http://purl.org/CONON#room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_trustee"/>
+        <NamedIndividual IRI="#TO_1"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provA#mySmartLamp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_trustor"/>
+        <NamedIndividual IRI="#TO_1"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-app#smartRoomApp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="#fuzzyLabel"/>
+            <Literal>&lt;fuzzyOwl2 fuzzyType=&quot;axiom&quot;&gt;
+&lt;Degree value=&quot;0.7&quot; /&gt;
+&lt;/fuzzyOwl2&gt;</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#has_behavior"/>
+        <NamedIndividual IRI="#TO_2"/>
+        <NamedIndividual IRI="#trust"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_context"/>
+        <NamedIndividual IRI="#TO_2"/>
+        <NamedIndividual IRI="http://purl.org/CONON#room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_trustee"/>
+        <NamedIndividual IRI="#TO_2"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-provA#myMotionDetectionSensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_trustor"/>
+        <NamedIndividual IRI="#TO_2"/>
+        <NamedIndividual IRI="http://purl.org/IoT/iot-app#smartRoomApp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_context"/>
+        <NamedIndividual IRI="#TO_3"/>
+        <NamedIndividual IRI="http://purl.org/CONON#port"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTrustValue"/>
+        <NamedIndividual IRI="#TO_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTrustValue"/>
+        <NamedIndividual IRI="#TO_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_behavior"/>
+        <Class IRI="#TrustworthinessObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_context"/>
+        <Class IRI="#TrustworthinessObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_trustee"/>
+        <Class IRI="#TrustworthinessObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_trustor"/>
+        <Class IRI="#TrustworthinessObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#trust_algorithm"/>
+        <Class IRI="#TrustworthinessObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_behavior"/>
+        <Class IRI="#Behavior"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_context"/>
+        <Class IRI="http://purl.org/CONON#Context-Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_trustee"/>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_trustor"/>
+        <Class abbreviatedIRI="iot:IoT-Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#trust_algorithm"/>
+        <Class IRI="#TrustAlgorithm"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTrustValue"/>
+        <Class IRI="#TrustworthinessObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTrustValue"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Behavior</IRI>
+        <Literal xml:lang="en">Behavior</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TO_1</IRI>
+        <Literal xml:lang="en">TO_1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TO_2</IRI>
+        <Literal xml:lang="en">TO_2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TO_3</IRI>
+        <Literal xml:lang="en">TO_3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TrustAlgorithm</IRI>
+        <Literal xml:lang="en">TrustAlgorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TrustworthinessObject</IRI>
+        <Literal xml:lang="en">TrustworthinessObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTrustValue</IRI>
+        <Literal xml:lang="el">hasTrustValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_behavior</IRI>
+        <Literal xml:lang="en">has_behavior</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_context</IRI>
+        <Literal xml:lang="en">has_context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_trustee</IRI>
+        <Literal xml:lang="en">has_trustee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_trustor</IRI>
+        <Literal xml:lang="en">has_trustor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#trust</IRI>
+        <Literal xml:lang="en">being reliable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trust</IRI>
+        <Literal xml:lang="en">trust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyLabel"/>
+        <IRI>#trustModifier</IRI>
+        <Literal>&lt;fuzzyOwl2 fuzzyType=&quot;modifier&quot;&gt;
+&lt;Modifier type=&quot;linear&quot; c=&quot;1.0&quot; /&gt;
+&lt;/fuzzyOwl2&gt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trust_algorithm</IRI>
+        <Literal xml:lang="en">has_algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/CONON#Context-Entity</IRI>
+        <Literal xml:lang="en">Context-Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/CONON#port</IRI>
+        <Literal xml:lang="en">port</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/CONON#room</IRI>
+        <Literal xml:lang="en">room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/IoT/IoT-trustOnto.owl#fuzzyLabel"/>
+        <IRI>http://purl.org/IoT/IoT-trustOnto.owl#trustModifier</IRI>
+        <Literal>&lt;fuzzyOwl2 fuzzyType=&quot;modifier&quot;&gt;
+&lt;Modifier type=&quot;linear&quot; c=&quot;0.0&quot; /&gt;
+&lt;/fuzzyOwl2&gt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>iot:IoT-Entity</AbbreviatedIRI>
+        <Literal xml:lang="en">IoT-Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/IoT/iot-app#smartRoomApp</IRI>
+        <Literal xml:lang="en">smartRoomApp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/IoT/iot-provA#myMotionDetectionSensor</IRI>
+        <Literal xml:lang="en">myMotionDetectionSensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/IoT/iot-provA#mySmartLamp</IRI>
+        <Literal xml:lang="en">mySmartLamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/IoT/iot-provB#herMotionDetectionSensor</IRI>
+        <Literal xml:lang="en">herMotionDetectionSensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/IoT/iot-provB#herSmartLamp</IRI>
+        <Literal xml:lang="en">herSmartLamp</Literal>
+    </AnnotationAssertion>
+    <DatatypeDefinition>
+        <Datatype IRI="#trustModifier"/>
+        <DataIntersectionOf>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataIntersectionOf>
+    </DatatypeDefinition>
+    <DatatypeDefinition>
+        <Datatype IRI="http://purl.org/IoT/IoT-trustOnto.owl#trustModifier"/>
+        <DataIntersectionOf>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataIntersectionOf>
+    </DatatypeDefinition>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
