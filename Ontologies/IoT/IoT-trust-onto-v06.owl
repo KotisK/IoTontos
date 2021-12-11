@@ -177,8 +177,6 @@ This version changes ontology URI, from &quot;purl&quot;-related to &quot;i-lab&
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Behavior"/>
-        <Class IRI="#TrustAlgorithm"/>
-        <Class IRI="#TrustworthinessObject"/>
         <Class IRI="http://purl.org/CONON#Context-Entity"/>
         <Class abbreviatedIRI="iot:IoT-Entity"/>
     </DisjointClasses>
